@@ -95,11 +95,49 @@
 #       row_string += ' '
 #   print(row_string)
 
-# EXCERCISE CHECK DUPLICATE VALUES
+# # EXCERCISE CHECK DUPLICATE VALUES
+# random_list = ['a', 'b', 'c', 'a', 'd', 'e', 'b', 'd', 'g','n',"n"]
+# duplicate_list = []
+# for value in random_list:
+#   if random_list.count(value) > 1:
+#     if value not in duplicate_list:
+#       duplicate_list.append(value)
+# print(duplicate_list)
+
+# # Docstring in use
+
+# def simple_sum ():
+#   '''
+#     This function adds two hardcoded number
+#   '''
+#   return 3 + 4;
+# print(simple_sum.__doc__)
+
+# HIGHEST EVEN EXERCISE
+
+# def highest_even(li):
+#   result = []
+#   for n in li:
+#     if n % 2 == 0:
+#       result.append(n)
+  
+#   return max(result)
+#   #TH CODE BELOW WAS MY SOLUTION BUT THE SOULTION ABOVE IS FAR MORE BETTER
+#   # result.sort()
+#   # return result[len(result)-1]
+
+# print(highest_even([10,2,3,984,6,11,88]))
+
+## DATA COMPREHENSIONS
+# my_dict = {item: item**3 for item in [1,2,3,4]}
+# print(my_dict)
+
+# COPMREHENSION EXERCISE
 random_list = ['a', 'b', 'c', 'a', 'd', 'e', 'b', 'd', 'g','n',"n"]
-duplicate_list = []
-for value in random_list:
-  if random_list.count(value) > 1:
-    if value not in duplicate_list:
-      duplicate_list.append(value)
+duplicate_list = list(set([value for value in random_list if random_list.count(value) > 1]))
+# for value in random_list:
+  # if random_list.count(value) > 1:
+  #   if value not in duplicate_list:
+  #     duplicate_list.append(value)
 print(duplicate_list)
+
